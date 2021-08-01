@@ -12,12 +12,13 @@ subtitle: A Personal Wishing-WebSite dedicated to your buddy, friend, love or fa
 				{% for product in site.products %}
 					<li>
 						{% include product-styles.html product=product %}
-						<div class="product-details">
+						<div class="product-details"> 
 							<h4><a href="{{ product.url }}">{{ product.name }}</a></h4>
 							<div class="product-description">
 								{{ product.description_markdown | truncate: 45 | markdownify }}
 							</div>
 							<p>${{ product.price }}</p>
+							<script type="text/javascript">amzn_assoc_ad_type ="responsive_search_widget"; amzn_assoc_tracking_id ="cryingbaby-21"; amzn_assoc_marketplace ="amazon"; amzn_assoc_region ="IN"; amzn_assoc_placement =""; amzn_assoc_search_type = "search_widget";amzn_assoc_width ="auto"; amzn_assoc_height ="auto"; amzn_assoc_default_search_category ="Baby"; amzn_assoc_default_search_key ="clothes";amzn_assoc_theme ="light"; amzn_assoc_bg_color ="FFFFFF"; </script><script src="//z-in.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&Operation=GetScript&ID=OneJS&WS=1&Marketplace=IN"></script>
 						</div>
 					</li>
 				{% endfor %}
